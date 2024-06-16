@@ -11,6 +11,7 @@ percentage.
 """
 
 # Local variables that stores the dollar amount and percentage rate
+
 monthlySales = 0
 storeAmount = 0
 empAmount = 0
