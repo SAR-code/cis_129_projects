@@ -4,8 +4,14 @@ Module 5 Exercise
 Dylan McCallum
 06/19/2024
 
-This program contains module 5 exercises.
+This program contains module 5 exercises as per the assignment.
 
+"""
+
+"""
+    Code snippet for 3.1
+    Validating user input with a continuous loop
+    
 """
 
 passes = 0  # number of passes
@@ -44,3 +50,36 @@ print('Failed Inputs:', failed_inputs)
 
 if passes > 8:
     print('Bonus to instructor')
+
+"""
+    Code snippet for 3.3
+    What does this program print
+    
+"""
+
+for row in range(10):
+    for column in range(10):
+        print('<' if row % 2 == 1 else '>', end='')
+    print()
+
+
+"""
+    Code snippet for 3.7
+    Reimplement the previous script using a for-loop and f-string capabilities
+    
+"""
+
+square = 0 # number squared
+cube = 0 # number cubed
+
+# sets the table format
+print('\tnumber\tsquare\tcube')
+
+# processes each number in the range and raises it to the 2nd/3rd power
+for number_list in range(6):
+    
+    square = number_list ** 2
+    cube = number_list ** 3
+    
+    # outputs the results
+    print(f"\t{number_list}\t{square}\t{cube}")
