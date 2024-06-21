@@ -12,7 +12,7 @@ a bottle tracking system used by a grocery store.
 """
 # declaring local variables for bottle return program 
 
-counter = 1             # controls the inner loop
+counter = 1             # controls the inner-loop
 
 total_bottles = 0       # stores total bottles
 today_bottles = 0       # stores number of bottles returned on a day
