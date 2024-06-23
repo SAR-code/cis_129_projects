@@ -38,7 +38,9 @@ def get_total_hotdogs():
     total = attendees * hotdogs
     
     return total    # returns the total
-    
+
+# reassigning global variable to a function
+
 total_hotdogs = get_total_hotdogs()
 
 # declaring function to get results of remaining hotdogs and buns leftover
