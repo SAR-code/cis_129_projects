@@ -13,6 +13,8 @@ cookout and the amount of hotdogs each person is given.
 
 """
 
+import math     # importing math module
+
 # declaring global variable for total hotdogs
 
 total_hotdogs = 0
@@ -63,9 +65,17 @@ def show_results(total):
     dogs_left = (DOGS - total % DOGS) % DOGS
     min_dogs = (total / DOGS) + (0**(0** dogs_left))
     
+    buns_left = (BUNS - total % BUNS) % BUNS
+    min_buns = (total / BUNS) + (0**(0** buns_left))
+    
     # displays message to the user
     
-    print(f"Minimum packages of hotdogs needed {min_dogs}",
-           f"There will be {dogs_left} leftover")
+    print(f"Minimum packages of hotdogs needed {math.floor(min_dogs)}.",
+           f"\nHotdogs remaining {dogs_left}")
+    
+    print(f"Minimum packages of hotdog buns needed {math.floor(min_buns)}.",
+           f"\nHotdog buns remaining {buns_left}")
+
+# invokes function to display results
 
 show_results(total_hotdogs)
