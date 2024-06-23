@@ -70,11 +70,11 @@ def show_results(total):
     
     # displays message to the user
     
-    print(f"Minimum packages of hotdogs needed {math.floor(min_dogs)}.",
-           f"\nHotdogs remaining {dogs_left}")
+    print(f"\nMinimum packages of hotdogs needed: {math.floor(min_dogs)}",
+           f"\nHotdogs remaining: {dogs_left}")
     
-    print(f"Minimum packages of hotdog buns needed {math.floor(min_buns)}.",
-           f"\nHotdog buns remaining {buns_left}")
+    print(f"\nMinimum packages of hotdog buns needed: {math.floor(min_buns)}",
+           f"\nHotdog buns remaining: {buns_left}")
 
 # invokes function to display results
 
