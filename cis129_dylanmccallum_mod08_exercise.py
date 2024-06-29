@@ -19,7 +19,7 @@ This program contains module 8 exercise 5.9 as per the assignment.
 # declaring global variable as a test string with mixed casing
 
 test_string1 = ' Ra D /ar ! @' 
-test_string2 = 'bobcat'
+test_string2 = 'bobca!t@'
 
 # declaring function to determine whether a string is a palindrome
 
@@ -27,7 +27,7 @@ def is_palindrome(str):
     
     # initializing a stack to hold the string value
     
-    stack = []
+    #stack = []
     
     # variable containing regex
     
@@ -41,18 +41,15 @@ def is_palindrome(str):
     
     # converts string to lowercase and replaces/removes spaces
     
-    stack.append(str.lower().replace(" ",""))
+    stack = [str.lower().replace(" ","")]
     
-    # Reverses the original stack for setup
-    reversed_stack = stack.reverse()
+    stack_reversed = stack[0] [::-1]
     
-    print(reversed_stack)
-    
-    if reversed_stack == stack:
+    if stack[0] == stack_reversed:
         print(f"{stack} is a palindrome!")
-        return
     else: 
         print(f"I'm sorry, {stack} is not a palindrome")
-        return 
+        
+
 
 is_palindrome(test_string1)
