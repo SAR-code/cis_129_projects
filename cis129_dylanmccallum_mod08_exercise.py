@@ -16,18 +16,16 @@ This program contains module 8 exercise 5.9 as per the assignment.
     palindrome, and False otherwise.
     
 """
-# declaring global variable as a test string with mixed casing
+# declaring global variables with mixed casing, regex, and spacing for testing
 
 test_string1 = ' Ra D /ar ! @' 
 test_string2 = 'bobca!t@'
+test_string3 = 'rac[]ec#ar'
+test_string4 = '!pine_apple'
 
 # declaring function to determine whether a string is a palindrome
 
 def is_palindrome(str):
-    
-    # initializing a stack to hold the string value
-    
-    #stack = []
     
     # variable containing regex
     
@@ -39,17 +37,34 @@ def is_palindrome(str):
         if punc in punctuation:
             str = str.replace(punc, "")
     
-    # converts string to lowercase and replaces/removes spaces
+    # initializes a new list that ignores case sensitivity and spaces
     
     stack = [str.lower().replace(" ","")]
     
+    # reverse the string inside the stack
+    
     stack_reversed = stack[0] [::-1]
     
+    # compares the original stack with the string reversed stack
+    
     if stack[0] == stack_reversed:
-        print(f"{stack} is a palindrome!")
-    else: 
-        print(f"I'm sorry, {stack} is not a palindrome")
         
+        #if output is True
+        
+        print(f"{stack} is a palindrome!")
+        return True
+    else: 
+        
+        #if output is False
+        
+        print(f"I'm sorry, {stack} is not a palindrome")
+        return False
 
+# invokes the function and determines whether the function is True or False
 
-is_palindrome(test_string1)
+isBool = is_palindrome(test_string1)
+
+if (isBool):
+    print("True")
+else:
+    print('False')
