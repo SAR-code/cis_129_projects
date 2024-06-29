@@ -81,3 +81,4 @@ def show_results(total):
 # invokes function to display results
 
 show_results(total_hotdogs)
+
