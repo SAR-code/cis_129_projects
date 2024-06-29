@@ -64,7 +64,9 @@ def is_palindrome(str):
 
 isBool = is_palindrome(test_string1)
 
+# conditional statement for is_palindrome
+
 if (isBool):
-    print("True")
+    print('True')
 else:
     print('False')
