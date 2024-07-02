@@ -56,10 +56,10 @@ def main():
 
     print(border)
 
-   # outputs the total income made and total seats sold
+   # outputs the total tickets and seats sold
 
-    print(f"\nTotal ticket revenue: ${total_sales[0]}"
-          f"\nTotal seats sold: {total_sales[1]}")
+    print(f"\nTotal tickets bought: ${total_sales[0]}"
+          f"\nTotal seats bought: {total_sales[1]}")
 
     print(border)
 
