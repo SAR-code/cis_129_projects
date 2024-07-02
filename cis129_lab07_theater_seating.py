@@ -99,7 +99,7 @@ def calculate_theater_sales(ticket_sales, sec_a, sec_b, sec_c):
             print(f"\nSection {section}", 
                   f"subtotal: ${price_per_section},", 
                   f"seats: {number_tickets}")
-            
+
     return total_sales, total_seats
 
 # gets the number of tickets sold in each section while validating user input
@@ -114,7 +114,7 @@ def get_tickets(section_list):
         for section in section_list:
             tickets_sold = int(input(f"Tickets sold in section {section}: "))
             newValue = (get_valid_num(tickets_sold))
-            
+
             if newValue < 0:
                 continue
             else:
