@@ -138,4 +138,6 @@ def get_valid_num(str_msg):
 
     return new_value
 
+# invokes the main function
+
 main()
