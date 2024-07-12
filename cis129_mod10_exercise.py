@@ -19,17 +19,32 @@ check_one = 5654.45
 check_two = 1230.60
 check_three = 399.87
 
+border = "----------"
+position_num = '0123456789'
+
 
 # Declaring main function
 
 def main():
     print("Main function running")
     
-    deposit_system(check_one)
+    deposit_system(check_two)
+
 
 # Declaring function to receive monetary input
 
 def deposit_system(cash_amt):
-    print(f"we received a check in the amount of ${cash_amt:.2f}")
+    
+    
+    cash_amt_to_string = str("{0:.2f}".format(cash_amt))
+    mark = '*'
+    result = ''
+    
+    if len(cash_amt_to_string) < 10:
+        mark_calc = (10 - len(cash_amt_to_string))
+        mark = mark * mark_calc
+        result = mark + cash_amt_to_string
+             
+    print(f"{result}\n{border}\n{position_num}")
 
 main()
