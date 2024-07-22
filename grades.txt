@@ -1,6 +1,9 @@
-Student   Grade     
+Students  Grades    
+****************
+
 Dylan     100       
-Ron       87        
+Aj        89        
 Sam       88        
-Ben       62        
-The class average is 84.25
+Tom       78        
+
+The class average is 88.75

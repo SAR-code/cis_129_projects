@@ -35,6 +35,7 @@ def main():
     class_grades = []
     grade_list = []
     count = 1
+    border = "*"
     
     
     while stop_grading == 'no':
@@ -72,25 +73,18 @@ def main():
                 class_room_average = get_class_total(grade_list)
                 
                 with open('grades.txt', mode='w') as grades:
-                    print(f'{"Student":<10}{"Grade":<10}\n', file = grades)
+                    print(f'{"Students":<10}{"Grades":<10}', file = grades)
+                    print(f'{border * 16}\n', file = grades)
                     
                     for obj in class_grades:
-                        print(f'{obj.name:<10}{obj.grade:<10}\n', file = grades)
+                        print(f'{obj.name:<10}{obj.grade:<10}', file = grades)
                         
                     #print(class_grades, file = grades)
-                    print(f"The class average is {class_room_average}\n",
+                    print(f"\nThe class average is {class_room_average}",
                           file = grades
                           )
 
     
-    
-    
-    # create a grades.txt to write and store grades into
-    
-    # with open('grades.txt', mode='w') as grades:
-    #     grades.write('100 Dylan 98\n')
-    #     grades.write('200 Alex 79\n')
-    #     grades.write('300 Dan 84\n')
 
 def get_class_total(grades=list):
     class_sum = sum(grades)
