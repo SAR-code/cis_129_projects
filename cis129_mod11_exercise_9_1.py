@@ -4,14 +4,16 @@ Module 11 exercise 9.1, 9.2
 Dylan McCallum
 07/21/2024
 
-Writing Grades To A Plain Text File
+Part 1
+Writing Grades To A Plain Text File 
 
 This program calculates grades from the class and returns the class average
 and then stores the grades in a text file.
 
+Part 2
 Reading Grades From A Plain Text File
 
-This program also reads grades from the class and returns the individual grades
+This program also reads grades from the class and returns the individual grade
 and their total, count, and average
 
 """
@@ -40,8 +42,6 @@ def main():
     count = 1
     border = "*"
     
-
-
 
     while stop_grading == 'no':
     
@@ -78,9 +78,9 @@ def main():
                     print("Enter yes or no")
                     continue
 
-            
                 # adds student to the class list
                 if stop_grading == 'no':
+                    
                     student = Student(student_name, grade)
                     grade_list.append(grade)
                     class_grades.append(student)
@@ -94,10 +94,12 @@ def main():
                     count = 0
 
             # catches and raises incorrect input
+            
             except ValueError:
                 print("You must enter a number for grade")
 
             else:
+                
                 # stores the list of grades in a variable
 
                 class_room_ave = get_class_total(grade_list)
@@ -136,8 +138,6 @@ def main():
         print(f"\nThe class average is: {class_avg_r:.2f}")
         print(f"The total class grade count is: {len(grade_list)}")
         print(f"The class grade total is: {sum(grade_list)}")
-    
-    
 
 
 # function that calculates the class's grade average

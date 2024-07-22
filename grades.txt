@@ -2,9 +2,8 @@ Students  Grades
 ****************
 
 Dylan     100       
-Scott     87        
-Ben       45        
-Zack      82        
-Tam       91        
+Noah      100       
+Denzal    100       
+Mac       72        
 
-The class average is 81.00
+The class average is 93.00
