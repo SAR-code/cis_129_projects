@@ -11,9 +11,7 @@ and then stores the grades in a text file.
 
 """
 
-# declare global variables and objects
-
-# declare class object to hold the student name and grade
+# declare global variables & class objects to hold the student name and grade
 
 class Student:
     def __init__(self, name=str, grade=int):
@@ -69,22 +67,27 @@ def main():
                 print("You must enter a name for student or number for grade")
         
             else:
-                print(class_grades)
+                # stores the list of grades in a variable
+                
                 class_room_average = get_class_total(grade_list)
                 
+                # outputs the variables into a formatted txt.file
                 with open('grades.txt', mode='w') as grades:
                     print(f'{"Students":<10}{"Grades":<10}', file = grades)
                     print(f'{border * 16}\n', file = grades)
                     
+                    # gets the name and grade key value pairs from the obj
                     for obj in class_grades:
-                        print(f'{obj.name:<10}{obj.grade:<10}', file = grades)
+                        print(f'{obj.name:<10}{obj.grade:<10}',
+                              file = grades
+                              )
                         
                     #print(class_grades, file = grades)
                     print(f"\nThe class average is {class_room_average}",
                           file = grades
                           )
 
-    
+# function that calculates the class's grade average
 
 def get_class_total(grades=list):
     class_sum = sum(grades)
