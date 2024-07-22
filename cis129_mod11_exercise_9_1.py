@@ -61,38 +61,45 @@ def main():
                     grade_list.append(grade)
                     class_grades.append(student)
                     count = 0
-            
+
             # catches and raises incorrect input
             except ValueError:
                 print("You must enter a name for student or number for grade")
-        
+
             else:
                 # stores the list of grades in a variable
-                
+
                 class_room_average = get_class_total(grade_list)
-                
+
                 # outputs the variables into a formatted txt.file
                 with open('grades.txt', mode='w') as grades:
                     print(f'{"Students":<10}{"Grades":<10}', file = grades)
                     print(f'{border * 16}\n', file = grades)
-                    
+
                     # gets the name and grade key value pairs from the obj
                     for obj in class_grades:
                         print(f'{obj.name:<10}{obj.grade:<10}',
                               file = grades
                               )
-                        
+
                     #print(class_grades, file = grades)
                     print(f"\nThe class average is {class_room_average}",
                           file = grades
                           )
+                
+                print(f"{class_grades}\nclass average: {class_room_average}")
+                
 
 # function that calculates the class's grade average
 
 def get_class_total(grades=list):
+    
+    # gets the sum of all grades
     class_sum = sum(grades)
+    
+    #gets the average of grades submitted
     class_avg = class_sum / len(grades)
-    print(f"The class average is {class_avg:.2f}")
+    
     return class_avg
 
 # invokes main function
