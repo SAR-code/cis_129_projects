@@ -10,7 +10,6 @@ This program calculates grades from the class and returns the class average
 and then stores the grades in a text file.
 
 """
-import re
 
 # declare global variables & class objects to hold the student name and grade
 
