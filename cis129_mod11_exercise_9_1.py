@@ -28,7 +28,6 @@ class Student:
 # declare main function to hold program operations
 
 def main():
-    print("Hello")
     
     # initialize variables for while loop
     
@@ -70,7 +69,18 @@ def main():
         
             else:
                 print(class_grades)
-                get_class_total(grade_list)
+                class_room_average = get_class_total(grade_list)
+                
+                with open('grades.txt', mode='w') as grades:
+                    print(f'{"Student":<10}{"Grade":<10}\n', file = grades)
+                    
+                    for obj in class_grades:
+                        print(f'{obj.name:<10}{obj.grade:<10}\n', file = grades)
+                        
+                    #print(class_grades, file = grades)
+                    print(f"The class average is {class_room_average}\n",
+                          file = grades
+                          )
 
     
     

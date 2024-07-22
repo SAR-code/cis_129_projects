@@ -1,3 +1,6 @@
-100 Dylan 98
-200 Alex 79
-300 Dan 84
+Student   Grade     
+Dylan     100       
+Ron       87        
+Sam       88        
+Ben       62        
+The class average is 84.25
