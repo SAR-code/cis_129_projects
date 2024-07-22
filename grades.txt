@@ -1,0 +1,8 @@
+Students  Grades    
+****************
+
+Cloud     97        
+Aerith    100       
+Yuffie    80        
+
+The class average is 92.33
