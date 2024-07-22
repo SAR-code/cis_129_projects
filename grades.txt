@@ -2,9 +2,7 @@ Students  Grades
 ****************
 
 Dylan     100       
-Alex      78        
-Ren       76        
-Zack      89        
-Ben       88        
+Sam       45        
+Tom       99        
 
-The class average is 86.2
+The class average is 81.33333333333333

@@ -10,6 +10,7 @@ This program calculates grades from the class and returns the class average
 and then stores the grades in a text file.
 
 """
+import re
 
 # declare global variables & class objects to hold the student name and grade
 
@@ -27,13 +28,14 @@ class Student:
 
 def main():
     
-    # initialize variables for while loop
+    # initialize variables for while loop and function operations
     
     stop_grading = 'no'
     class_grades = []
     grade_list = []
     count = 1
     border = "*"
+    
     
     
     while stop_grading == 'no':
@@ -44,8 +46,20 @@ def main():
             
             # attempt to receive correct value inputs for grades
             try:
-                student_name = input("Enter the student's name: ")
+                student_name = str(input("Enter the student's name: ").title())
+                
+                if not student_name.isalpha():
+                    print("Invalid input, only letters")
+                    continue
+                    
+                
                 grade = int(input(f"What is {student_name}'s grade?: "))
+                
+                # validates grade input from the user
+                if grade > 100 or grade < 0:
+                   print("Invalid input, enter a number between 0 and 100")
+                   continue
+               
                 stop_grading = input("Stop grading? ( yes/no ): ")
             
                 # adds student to the class list
@@ -64,7 +78,7 @@ def main():
 
             # catches and raises incorrect input
             except ValueError:
-                print("You must enter a name for student or number for grade")
+                print("You must enter a number for grade")
 
             else:
                 # stores the list of grades in a variable
