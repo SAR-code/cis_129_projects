@@ -2,9 +2,9 @@ Students  Grades
 ****************
 
 Dylan     100       
-Ben       89        
-Sam       77        
-Cook      52        
-John      92        
+Scott     87        
+Ben       45        
+Zack      82        
+Tam       91        
 
-The class average is 82.0
+The class average is 81.00

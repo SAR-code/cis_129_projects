@@ -1,6 +1,6 @@
 # cis129_mod11_exercise_9_1.py
 """
-Module 11 exercise 9.1
+Module 11 exercise 9.1, 9.2
 Dylan McCallum
 07/21/2024
 
@@ -8,6 +8,11 @@ Writing Grades To A Plain Text File
 
 This program calculates grades from the class and returns the class average
 and then stores the grades in a text file.
+
+Reading Grades From A Plain Text File
+
+This program also reads grades from the class and returns the individual grades
+and their total, count, and average
 
 """
 
@@ -34,6 +39,7 @@ def main():
     grade_list = []
     count = 1
     border = "*"
+    
 
 
 
@@ -94,7 +100,7 @@ def main():
             else:
                 # stores the list of grades in a variable
 
-                class_room_average = get_class_total(grade_list)
+                class_room_ave = get_class_total(grade_list)
 
                 # outputs the variables into a formatted txt.file
                 with open('grades.txt', mode='w') as grades:
@@ -108,11 +114,30 @@ def main():
                               )
 
                     #print(class_grades, file = grades)
-                    print(f"\nThe class average is {class_room_average}",
+                    print(f"\nThe class average is {class_room_ave:.2f}",
                           file = grades
                           )
 
-                print(f"{class_grades}\nclass average: {class_room_average}")
+                print(f"{class_grades}\nclass average: {class_room_ave:.2f}")
+    
+    # this portion reads the file previously written
+    
+    with open('grades.txt', mode='r') as grades:
+        print(f'\n{"Students":<10}{"Grades":<10}')
+        print(f'{border * 16}\n')
+        
+        # gets the name and grade key value pairs from the obj
+        for obj in class_grades:
+            print(f'{obj.name:<10}{obj.grade:<10}')
+        
+        class_avg_r = get_class_total(grade_list)
+        
+        # outputs the individual grades, count, average, and total
+        print(f"\nThe class average is: {class_avg_r:.2f}")
+        print(f"The total class grade count is: {len(grade_list)}")
+        print(f"The class grade total is: {sum(grade_list)}")
+    
+    
 
 
 # function that calculates the class's grade average
