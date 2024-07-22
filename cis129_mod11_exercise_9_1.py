@@ -18,53 +18,53 @@ class Student:
     def __init__(self, name=str, grade=int):
         self.name = name
         self.grade = grade
-    
+
     # returns string representation of the Student Object
     def __repr__(self):
         return f"{self.name}: {self.grade}"
-                
+
 
 # declare main function to hold program operations
 
 def main():
-    
+
     # initialize variables for while loop and function operations
-    
+
     stop_grading = 'no'
     class_grades = []
     grade_list = []
     count = 1
     border = "*"
-    
-    
-    
+
+
+
     while stop_grading == 'no':
-        
+    
         # while loop to append students and grades to a list
-        
+
         while count != 0:
-            
+
             # attempt to receive correct value inputs for grades
             try:
-                
+
                 student_name = str(input("Enter the student's name: ").title())
-                
+
                 # validates the name only contains letters
                 if not student_name.isalpha():
                     print("Invalid input, only letters")
                     continue
-                
+
                 grade = int(input(f"What is {student_name}'s grade?: "))
-                
+
                 # validates grade input from the user
                 if grade > 100 or grade < 0:
                    print("Invalid input, enter a number between 0 and 100")
                    continue
 
                 user_input = str(input("Stop grading? Enter yes or no: ")).lower()
-                
+
                 # validates if the answer is a yes or no
-                
+
                 if user_input == 'no':
                     stop_grading = user_input
                 elif user_input == 'yes':
@@ -72,7 +72,7 @@ def main():
                 else:
                     print("Enter yes or no")
                     continue
-                    
+
             
                 # adds student to the class list
                 if stop_grading == 'no':
@@ -81,7 +81,7 @@ def main():
                     class_grades.append(student)
                     count += 1
                 else:
-                    
+
                     # will add the last student entered into the list
                     student = Student(student_name, grade)
                     grade_list.append(grade)
@@ -112,20 +112,20 @@ def main():
                     print(f"\nThe class average is {class_room_average}",
                           file = grades
                           )
-                
+
                 print(f"{class_grades}\nclass average: {class_room_average}")
-                
+
 
 # function that calculates the class's grade average
 
 def get_class_total(grades=list):
-    
+
     # gets the sum of all grades
     class_sum = sum(grades)
-    
+
     #gets the average of grades submitted
     class_avg = class_sum / len(grades)
-    
+
     return class_avg
 
 # invokes main function
