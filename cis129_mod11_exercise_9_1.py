@@ -42,6 +42,7 @@ def main():
     count = 1
     border = "*"
     
+    # while loop waits for sentinel value
 
     while stop_grading == 'no':
     
@@ -51,6 +52,8 @@ def main():
 
             # attempt to receive correct value inputs for grades
             try:
+
+                # wrapping user inputs into variables
 
                 student_name = str(input("Enter the student's name: ").title())
 

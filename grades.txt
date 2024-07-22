@@ -1,9 +1,8 @@
 Students  Grades    
 ****************
 
-Dylan     100       
-Noah      100       
-Denzal    100       
-Mac       72        
+Cloud     97        
+Aerith    100       
+Yuffie    80        
 
-The class average is 93.00
+The class average is 92.33
