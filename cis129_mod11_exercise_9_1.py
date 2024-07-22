@@ -46,12 +46,13 @@ def main():
             
             # attempt to receive correct value inputs for grades
             try:
+                
                 student_name = str(input("Enter the student's name: ").title())
                 
+                # validates the name only contains letters
                 if not student_name.isalpha():
                     print("Invalid input, only letters")
                     continue
-                    
                 
                 grade = int(input(f"What is {student_name}'s grade?: "))
                 
@@ -59,8 +60,19 @@ def main():
                 if grade > 100 or grade < 0:
                    print("Invalid input, enter a number between 0 and 100")
                    continue
-               
-                stop_grading = input("Stop grading? ( yes/no ): ")
+
+                user_input = str(input("Stop grading? Enter yes or no: ")).lower()
+                
+                # validates if the answer is a yes or no
+                
+                if user_input == 'no':
+                    stop_grading = user_input
+                elif user_input == 'yes':
+                    stop_grading = user_input
+                else:
+                    print("Enter yes or no")
+                    continue
+                    
             
                 # adds student to the class list
                 if stop_grading == 'no':
