@@ -115,7 +115,6 @@ def main():
                               file = grades
                               )
 
-                    #print(class_grades, file = grades)
                     print(f"\nThe class average is {class_room_ave:.2f}",
                           file = grades
                           )
