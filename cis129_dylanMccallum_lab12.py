@@ -87,7 +87,7 @@ def main():
                 print("Invalid input, only letters")
                 continue
             
-            pet_type = str(input("Enter your pet's type: "))
+            pet_type = str(input("Enter your pet's type: ")).lower()
             
             # validates for letters only input
             
