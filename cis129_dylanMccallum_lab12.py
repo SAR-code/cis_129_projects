@@ -61,3 +61,34 @@ class Pet:
         """Sets the pet age."""
         
         self._age = age
+
+
+# declare main function to hold program operations
+
+def main():
+    
+    # declare local variables
+    
+    pet_name = str(input("Enter your pet's name: "))
+    pet_type = str(input("Enter your pet's type: "))
+    pet_age = int(input(f"{pet_name}'s age: "))
+    
+    pet_info(pet_name, pet_type, pet_age)
+
+# declare function to accept user input to use as arguments for constructor
+
+def pet_info(p_name=str, p_type=str, p_age=int):
+    
+    # creates a new instance of a pet
+    
+    new_pet = Pet(p_name, p_type, p_age)
+    
+    # outputs the various information regarding the pet created
+    
+    print(f"\nThe pet name is {new_pet.name}")
+    print(f"\nThe pet type is {new_pet.type}")
+    print(f"\nThe pet age is {new_pet.age}")
+
+# invokes main function
+
+main()
