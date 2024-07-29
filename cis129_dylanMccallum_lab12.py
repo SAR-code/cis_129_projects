@@ -5,7 +5,7 @@ Dylan McCallum
 07/28/2024
 
 This program demonstrates OOP principles utilizing a pet class object
-as an example.
+as an example with validation.
 
 """
 
@@ -69,11 +69,52 @@ def main():
     
     # declare local variables
     
-    pet_name = str(input("Enter your pet's name: "))
-    pet_type = str(input("Enter your pet's type: "))
-    pet_age = int(input(f"{pet_name}'s age: "))
+    is_valid = False
     
-    pet_info(pet_name, pet_type, pet_age)
+    # resets the loop if incorrect input is detected
+    
+    while is_valid == False:
+        
+        try:
+            
+            # wrap user input into variables
+            
+            pet_name = str(input("Enter your pet's name: ")).title()
+
+            # validates for letters only input
+            
+            if not pet_name.isalpha():
+                print("Invalid input, only letters")
+                continue
+            
+            pet_type = str(input("Enter your pet's type: "))
+            
+            # validates for letters only input
+            
+            if not pet_type.isalpha():
+                print("Invalid input, only letters")
+                continue
+            
+            pet_age = int(input(f"{pet_name}'s age: "))
+            
+            # validates age input for negative numbers
+            
+            if pet_age < 0:
+                print("Can't be negative years")
+                continue
+        
+        except ValueError:
+            print("You must enter a number for age")
+        else:
+            
+            # inputs variables into the function as arguments
+            
+            pet_info(pet_name, pet_type, pet_age)
+            
+            # ends the while loop upon correct input
+            
+            is_valid = True
+    
 
 # declare function to accept user input to use as arguments for constructor
 
