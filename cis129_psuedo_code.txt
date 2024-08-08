@@ -1,0 +1,38 @@
+
+"""
+Final
+Dylan McCallum
+8/8/2024
+
+Pseudocode demo for project
+
+"""
+
+# User inputs car information
+
+Function get_vehice_info(What is your vehicle information?)
+    User will enter as arguments:
+    -vehicle make
+    -vehicle model
+    -vehicle year
+        Function Trim  = What specific trim?
+        -Engine option
+        -Transmission option
+        -drivetrain 
+
+
+# User wants to post a question
+
+Function Post_Question(Insert question)
+    Function to receive a string question:
+    -once question is received, it will send a POST request to create a new question
+
+# User searching for solution
+
+Function get_solution(Insert query/question)
+    Function will send a GET request (Get_All specifically) to retrieve information from the database and/or
+    webscrape to find a soultion based on what the user entered
+
+    returns all possible results
+
+    
